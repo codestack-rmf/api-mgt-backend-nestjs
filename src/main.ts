@@ -30,6 +30,8 @@ async function bootstrap() {
         callback(new Error('Origin not allowed by CORS'));
       }
     },
+    credentials: true,
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   };
 
   app.enableCors(corsOptions);
