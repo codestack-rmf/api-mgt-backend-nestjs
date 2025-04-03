@@ -1,4 +1,4 @@
-import { Controller, Post, Body, Get, Param } from '@nestjs/common';
+import { Controller, Post, Body, Get, Param, Query } from '@nestjs/common';
 import { UserService } from '../services/user.service';
 import { CreateUserDto } from '../dto/create-user.dto';
 import { User } from '../entities/user.entity';
@@ -13,10 +13,10 @@ export class UserController {
         return await this.userService.createUser(createUserDto);
     }
 
-    @Get(":id")
-    async getUsers(@Param("id") idDeck): Promise<any> {
-        console.log(idDeck);
-        return analyzeDeck(idDeck);
+    @Get("validate-deck")
+    async getValidateDeck(@Query('url') url: string): Promise<any> {
+        
+        return analyzeDeck(url);
     }
 }
 

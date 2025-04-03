@@ -1448,9 +1448,12 @@ function combineAnalysis(
  */
 export async function analyzeDeck(deckUrl: string): Promise<DeckAnalysis> {
   try {
+    console.log("URL: ", deckUrl);
     // Parse URL to determine site
     const site = getDeckSite(deckUrl);
+    console.log("SITE: ", site);
     const deckId = extractDeckId(deckUrl, site);
+    console.log("SITE: ", deckId);
     
     if (!deckId) {
       throw new Error('Could not extract deck ID from URL');
