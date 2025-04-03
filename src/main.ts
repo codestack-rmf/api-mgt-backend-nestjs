@@ -19,6 +19,9 @@ async function bootstrap() {
     'http://localhost:3001',
     'http://localhost:4200',
     'https://deckritual.com',
+    'https://www.deckritual.com',
+    'https://deckritual.com/',
+    'https://www.deckritual.com/',
     "http://35.93.216.65:3400"
   ];
 
