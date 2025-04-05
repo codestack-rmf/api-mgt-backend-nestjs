@@ -22,7 +22,9 @@ async function bootstrap() {
     'https://www.deckritual.com',
     'https://deckritual.com/',
     'https://www.deckritual.com/',
-    "http://35.93.216.65:3400"
+    "http://35.93.216.65:3400",
+    'http://localhost:3400',
+    'http://127.0.0.1:3400'
   ];
 
   const corsOptions = {
